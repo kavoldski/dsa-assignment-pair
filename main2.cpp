@@ -6,7 +6,7 @@
 /*
 Name		: Cedric Hilary Samah || Mac
 Matrix No.	: 86350 || 00000
-Group		: Ayam
+Group		: Ayam Ketulan Ikan
 */
 
 using namespace std;
