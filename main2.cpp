@@ -18,7 +18,7 @@ class Bank{
 		void openacc();
 		void deposit();
 		void withdraw();
-		void display();s
+		void display();
 		void end();
 };
 
