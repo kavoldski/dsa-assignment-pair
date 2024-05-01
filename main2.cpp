@@ -4,9 +4,9 @@
 #include <unistd.h>
 
 /*
-Name 	: Cedric Hilary Samah
-Group 	: 21
-Pair	: MacCallister Aaron
+Name		: Cedric Hilary Samah || Mac
+Matrix No.	: 86350 || 00000
+Group		: Ayam
 */
 
 using namespace std;
