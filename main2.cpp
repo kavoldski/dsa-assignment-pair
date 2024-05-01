@@ -19,6 +19,7 @@ class Bank{
 		void deposit() ;
 		void withdraw() ;
 		void display() ;
+		void achievement() ;
 		void end() ;
 };
 
@@ -76,8 +77,14 @@ void Bank::withdraw() {
 	double amount ;
 	cout << "AMOUNT TO WITHDRAW \t\t: RM " ;
 	cin >> amount ;
-	balance-=amount ;
-	cout << "\n TOTAL BALANCE AMOUNT \t\t: RM" << fixed << setprecision(2) << balance << endl ;
+	
+	if(amount > balance)
+		cout << "\n\nInsufficient balance." ;
+	else
+		balance-=amount ;
+	cout << "\n\n TOTAL BALANCE AMOUNT \t\t: RM" << fixed << setprecision(2) << balance << endl <<endl ;
+	system("pause") ;
+	system("cls") ;
 }
 
 
@@ -87,12 +94,32 @@ void Bank::display() {
 	cout << "\nGRADE \t\t\t: " << grade ;
 	cout << "\nTYPE OF ACCOUNT \t: " << y ;
 	cout << "\nTOTAL DEPOSITED \t: RM " << fixed << setprecision(2) << balance << endl ;
+	cout << "\nACHIEVEMENTS:-";
+	achievement();
+	cout << endl;
+	system("pause");
+	system("cls");
 }
+
+
+void Bank::achievement() {
+	
+	//MILESTONE ACHIEVEMENTS
+	if (balance >= 1000 && balance <= 9999)
+		cout << "\nCongratulations! You have reach BEGINNER tier." ;
+	else if (balance >= 10000 && balance <= 99999)
+		cout << "\nCongratulations! You have reach PRIMARY tier." ;
+	else if (balance >= 100000 && balance <= 999999)
+		cout << "\nCongratulations! You have reach GOLD tier." ;
+	else
+		cout << "\nNo achievements yet.";
+}
+
+
 
 void Bank::end() {
 	system("cls") ;
 	cout << "\n\n******** THANK YOU FOR USING FINANCIAL & SAVING SYSTEM ********" ;
-	sleep(2) ;
 	exit(0) ;
 }
 
@@ -102,14 +129,15 @@ int main() {
 	Bank B;
 	int choice;
     do{
-    	cout << "\n =========================" ;
+    	cout << "+++++ FINANCIAL & SAVING SYSTEM +++++";
+    	cout << "\n\n =========================" ;
     	cout << "\n1.	OPEN ACCOUNT\n" ;
     	cout << "\n2.	MONEY DEPOSIT\n" ;
     	cout << "\n3.	WITHDRAW MONEY\n" ;
     	cout << "\n4.	DISPLAY MY ACCOUNT\n" ;
     	cout << "\n5.	EXIT" ;
     	cout << "\n =========================" ;
-    	cout << "\n OPTION \t :" ;
+    	cout << "\n OPTION \t :  " ;
     	cin >> choice ;
     	system("cls") ;
     	
